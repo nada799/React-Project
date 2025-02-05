@@ -1,0 +1,39 @@
+.Brand {
+    text-align: center;
+}
+
+.Brand .slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Brand .mySwiper {
+    padding: 20px 0;
+}
+
+.Brand .mySwiper img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.Brand .mySwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Brand .mySwiper .swiper-slide-active img {
+    transform: scale(1.4);
+}
+.Brand .SecTitle ul li a.active::after{
+    content: '';
+    padding-right: 5px;
+    color: #fff;
+}
+.Brand .SecTitle ul li a.active::before{
+    content: '';
+    padding-right: 5px;
+    color: #fff;
+}

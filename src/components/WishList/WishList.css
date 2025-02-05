@@ -1,0 +1,37 @@
+
+.WishList .card{
+    background-color: black;
+    border: 1px solid #888;
+    color: #fff;
+    transition: 0.3s;
+}
+.WishList .card:hover{
+    box-shadow: rgba(192, 179, 179, 0.779) 0px 5px 15px;
+}
+.WishList .card .card-img{
+    /* width: 30px; */
+    padding: 1px 30px;
+}
+.WishList .card-img img{
+    width: 100%;
+}
+.WishList .icons{
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.WishList .icon-1{
+    background-color: red;
+}
+.WishList .col-lg-3{
+    overflow: hidden;
+}
+
+@media (max-width:992px) {
+    .WishList .TopCategory .text-uppercase::after{
+        width: 500%;
+    }
+    .WishList .TopCategory img{
+        display: none;
+    }
+}

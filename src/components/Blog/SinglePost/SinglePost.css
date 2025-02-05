@@ -1,0 +1,140 @@
+.SinglePost .flex-column a{
+    position: relative;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: white;
+}
+.SinglePost .flex-column a:hover{
+    color: var(--main-color);
+}
+.SinglePost .topbrands{
+    position: relative;
+}
+.SinglePost .topbrands::after{
+    position: absolute;
+    content: '';
+    border: 1.5px solid var(--nav-color);
+    bottom: -5px;
+    width: 245%;
+    left: 0;
+}
+.SinglePost .col-lg-3{
+    overflow: hidden;
+}
+
+.SinglePost .flex-column a:not(:last-of-type)::after{
+    position: absolute;
+    content: '';
+    border-bottom: 1px dashed var(--nav-color);
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.SinglePost .latest{
+    position: relative;
+
+}
+.SinglePost .latest::after{
+    position: absolute;
+    content: '';
+    border: 1.5px solid var(--nav-color);
+    bottom: -5px;
+    width: 245%;
+    left: 0;
+}
+.SinglePost .TopCategory img{
+    display: none;
+}
+.SinglePost .posts{
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+.SinglePost .posts:hover{
+    box-shadow: var(--nav-color) 0px 7px 29px 0px;
+}
+.SinglePost .posts img{
+    width: 90px;
+    height: 50px;
+    margin: 10px 0 0 10px;
+}
+.SinglePost .posts > div b{
+    font-size: 15px;
+    font-weight: 500;
+}
+.SinglePost .posts > div p{
+    color: #888;
+    font-size: 14px;
+}
+.SinglePost .card{
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.SinglePost .card:hover{
+    box-shadow: var(--nav-color) 0px 7px 29px 0px;
+}
+.SinglePost .card img{
+    width: 100%;
+}
+.SinglePost .card .card-body{
+    color: #888;
+}
+.SinglePost .card .card-body b{
+    font-weight: 500;
+}
+.SinglePost .card .card-body p:nth-of-type(2){
+    border-left: 5px solid var(--main-color);
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+.SinglePost .comments > div div:nth-of-type(1) img{
+    width: 100%;
+}
+.SinglePost .comments > div div:nth-of-type(2){
+    color: #888;
+}
+.SinglePost .comments > div div:nth-of-type(2) p span{
+    font-size: 12px;
+}
+.SinglePost textarea{
+    height: 200px;
+}
+
+@media (max-width:992px) {
+    .SinglePost .topbrands::after{
+        position: absolute;
+        content: '';
+        border: 1.5px solid var(--nav-color);
+        bottom: -5px;
+        width: 550%;
+        left: 0;
+    }
+    .SinglePost .latest::after{
+        position: absolute;
+        content: '';
+        border: 1.5px solid var(--nav-color);
+        bottom: -5px;
+        width: 400%;
+        left: 0;
+    }
+    .SinglePost .TopCategory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .SinglePost .TopCategory .text-uppercase::after{
+        width: 450%;
+    }
+    .SinglePost .posts img{
+        width: 200px;
+        height: 100px;
+    }
+}

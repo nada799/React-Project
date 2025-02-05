@@ -1,0 +1,117 @@
+
+.AllProducts .box {
+    display: flex;
+    flex-direction: row !important;
+    gap: 20px;
+}
+.AllProducts .box  > div{
+    width: calc((100% - 40px) / 3);
+    display: flex;
+}
+
+.AllProducts .box.change {
+    flex-direction: column;
+}
+.AllProducts .box.change  > div{
+    width: 100%;
+}
+.AllProducts .box.change  > div img{
+    width: auto;
+    height: auto;
+}
+.AllProducts .box.change  > div .Product{
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    border-radius: 10px;
+    box-shadow: rgba(167, 158, 158, 0.24) 0px 3px 8px;
+    transition: 0.4s;
+    border: 1px solid var(--nav-color);
+    justify-content: flex-start;
+}
+.AllProducts .box.change > div .Product .card-body .details{
+    display: block;
+}
+.AllProducts .box.change > div .Product .process{
+    position: absolute;
+    top: 3px;
+    left: auto;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.AllProducts .box.change  > div .Product:hover .process{
+    right: 10px;
+}
+.AllProducts .box.change  > div .Product .images img{
+    width: 200px;
+}
+.AllProducts .box.change  > div .Product .details{
+    font-size: 16px;
+    white-space: normal;
+    text-overflow: clip;
+    width: auto;
+    text-align: start;
+
+}
+.AllProducts .box.change  > div .Product .card-body{
+    gap: 10px !important;
+    align-items: flex-start !important;
+}
+.AllProducts .box.change  > div .Product:hover{
+    box-shadow: rgba(200, 200, 217, 0.2) 0px 7px 29px 0px;
+}
+
+.AllProducts .search-bar input{
+    background-color: transparent;
+    /* outline: none; */
+    color: #fff;
+}
+.AllProducts .search-bar input:focus{
+    outline: none !important;
+    border: none !important;
+}
+.AllProducts .search-bar input::placeholder{
+    color: #888;
+    font-size: 14px;
+}
+.AllProducts select {
+    background-color: transparent !important;
+    color: white;
+    border: 1px solid #ccc;
+}
+.AllProducts select:focus{
+    outline-offset: none;
+}
+
+.AllProducts select option:hover {
+    background-color: var(--main-color) !important; 
+    color: yellow !important;
+}
+
+@media (max-width:1230px){
+    .AllProducts .box  > div{
+        width: calc((100% - 20px) / 2);
+    }
+}
+@media (max-width:768px) {
+    .AllProducts .box  > div{
+        width: 100%;
+    }
+    .AllProducts .box.change  > div .Product{
+        flex-direction: column !important;
+        padding: 10px;
+    }
+}
+@media (max-width:550px) {
+    .AllProducts .search-bar input{
+        width: 100px !important;
+    }
+    .AllProducts select{
+        width: 100px;
+        font-size: 14px;
+    }
+}

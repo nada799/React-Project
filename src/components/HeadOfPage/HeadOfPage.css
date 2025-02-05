@@ -1,0 +1,18 @@
+.HeadOfPage {
+    padding: 20px ;
+    background: url(../../assets/images/breadcrumb.jpg);
+    background-position: left center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.HeadOfPage div:nth-of-type(1){
+    font-size: 25px;
+    font-weight: 500;
+}
+.HeadOfPage div:nth-of-type(2){
+    color: #888;
+}
+.HeadOfPage div:nth-of-type(2) span:last-of-type{
+    color: #fff;
+}

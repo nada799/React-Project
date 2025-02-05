@@ -1,0 +1,58 @@
+.Product {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-direction: column;
+}
+.Product:hover .process{
+    left: 2px;
+}
+.Product .card-body b{
+    transition: 0.3s;
+}
+.Product .card-body b:hover{
+    color: var(--main-color);
+}
+.Product .images img{
+    display: block;
+    width: 300px;
+    height: 370px;
+}
+.Product .images img:nth-of-type(2){
+    display: none;
+}
+.Product:hover .images img:nth-of-type(1){
+    display: none;
+}
+.Product:hover .images img:nth-of-type(2){
+    display: block;
+}
+.Product .details{
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    color: var(--nav-color);
+}
+.Product .process{
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.Product .process div{
+    padding: 5px 10px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Product .process div:hover{
+    color: var(--main-color); 
+    transform: scale(1.1);
+}

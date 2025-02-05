@@ -1,0 +1,138 @@
+.Blog .flex-column a{
+    position: relative;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: white;
+}
+.Blog .flex-column a:hover{
+    color: var(--main-color);
+}
+.Blog .topbrands{
+    position: relative;
+}
+.Blog .topbrands::after{
+    position: absolute;
+    content: '';
+    border: 1.5px solid var(--nav-color);
+    bottom: -5px;
+    width: 245%;
+    left: 0;
+}
+.Blog .flex-column a:not(:last-of-type)::after{
+    position: absolute;
+    content: '';
+    border-bottom: 1px dashed var(--nav-color);
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.Blog .latest{
+    position: relative;
+
+}
+.Blog .latest::after{
+    position: absolute;
+    content: '';
+    border: 1.5px solid var(--nav-color);
+    bottom: -5px;
+    width: 245%;
+    left: 0;
+}
+.Blog .TopCategory img{
+    display: none;
+}
+.Blog .col-lg-3{
+    overflow: hidden;
+}
+.Blog .posts{
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+.Blog .posts:hover{
+    box-shadow: var(--nav-color) 0px 7px 29px 0px;
+}
+.Blog .posts img{
+    width: 90px;
+    height: 50px;
+    margin: 10px 0 0 10px;
+}
+.Blog .posts > div b{
+    font-size: 15px;
+    font-weight: 500;
+}
+.Blog .posts > div p{
+    color: #888;
+    font-size: 14px;
+}
+.Blog .col-lg-9 .card{
+    background-color: #212529;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.Blog .col-lg-9 .card:hover{
+    box-shadow: var(--nav-color) 0px 7px 29px 0px;
+}
+.Blog .col-lg-9 .card .card-body p{
+    color: #888;
+    font-size: 15px;
+}
+.Blog .col-lg-9 .card .card-body a{
+    text-decoration: none;
+    color: #888;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.Blog .col-lg-9 .card .card-body a:hover{
+    color: var(--main-color);
+}
+
+.Blog {
+    position: relative;
+}
+
+.col-9 .row:hover .card:not(:hover) {
+    filter: blur(5px);
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+}
+
+
+@media (max-width:992px) {
+    .Blog .topbrands::after{
+        position: absolute;
+        content: '';
+        border: 1.5px solid var(--nav-color);
+        bottom: -5px;
+        width: 550%;
+        left: 0;
+    }
+    .Blog .latest::after{
+        position: absolute;
+        content: '';
+        border: 1.5px solid var(--nav-color);
+        bottom: -5px;
+        width: 400%;
+        left: 0;
+    }
+    .Blog .TopCategory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Blog .TopCategory .text-uppercase::after{
+        width: 450%;
+    }
+    .Blog .posts img{
+        width: 200px;
+        height: 100px;
+    }
+}

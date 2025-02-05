@@ -1,0 +1,22 @@
+
+.Featured .swiper-pagination-bullet{
+    background-color: #fff;
+}
+.Featured .swiper-pagination-bullet-active{
+    background-color: var(--main-color);
+     
+}
+.Featured .fashion{
+    overflow: hidden;
+    
+}
+.Featured .fashion img{
+    width: 100%;
+    transition: 0.3s;
+}
+.Featured .Product .details{
+    display: none;
+}
+.Featured .fashion img:hover{
+    transform: scale(1.1);
+}

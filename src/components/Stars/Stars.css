@@ -1,0 +1,5 @@
+.Stars .star{
+    display: flex;
+
+    color: var(--main-color);
+}

@@ -1,0 +1,120 @@
+.Footer {
+    background-color: var(--nav-color);
+    padding-top: 90px;
+    margin-top: 50px;
+}
+
+.Footer input{
+    padding: 15px 20px;
+    width: 400px;
+    outline: none;
+    border: none;
+}
+.Footer input::placeholder{
+    font-size: 15px;
+    color: #9c9c9c;
+}
+.Footer button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 13px 30px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.Footer button:hover{
+    background-color: var(--main-color);
+}
+.Footer .row{
+    padding: 0 0 50px 0;
+}
+
+.Footer .detailss b{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.Footer p{
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.Footer .text-uppercase{
+    font-size: 20px;
+    font-weight: 400;
+}
+.Footer .col-lg-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Footer .col-lg-3 .icon{
+    display: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.Footer .col-lg-3 .icon.active{
+    transform: rotate(45deg);
+}
+.Footer .col-lg-3 .icon:hover{
+    color: var(--main-color);
+}
+
+.Footer .col-lg-3 p{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Footer .col-lg-3 p:hover{
+    color: var(--main-color);
+    letter-spacing: 0.3px;
+}
+
+.Footer .bottom{
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.Footer .icons{
+    color: #a5a5a5;
+}
+.Footer .flex.gap-4 .icons{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.Footer .flex.gap-4 .icons:hover{
+    color: var(--main-color);
+}
+.Footer .bottom .m-0{
+    font-size: 17px;
+}
+@media (max-width:992px) {
+    .Footer .container > div:nth-of-type(1){
+        flex-direction: column;
+    }
+    .Footer .details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+        padding: 0 10px;
+        background-color: var(--nav-color);
+    }
+    .Footer input{
+        width: 100%;
+    }
+    .Footer .details.open {
+        max-height: 300px; /* أو أي قيمة مناسبة */
+        padding: 15px;
+    }
+    .Footer .bottom > div{
+        color: green;
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .Footer .col-lg-3 .icon{
+        display: inline;
+    }
+}

@@ -1,0 +1,10 @@
+.Nested2 .text-uppercase{
+    font-size: 18px;
+    font-weight: 600;
+}
+.Nested2 p{
+    color: #888;
+}
+.Nested2 textarea{
+    height: 130px;
+}

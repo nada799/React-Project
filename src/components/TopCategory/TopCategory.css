@@ -1,0 +1,37 @@
+.TopCategory{
+    overflow: hidden;
+}
+
+.TopCategory .flex-column a{
+    position: relative;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: white;
+}
+.TopCategory .flex-column a:hover{
+    color: var(--main-color);
+}
+.TopCategory .text-uppercase{
+    position: relative;
+}
+.TopCategory .text-uppercase::after{
+    position: absolute;
+    content: '';
+    border: 1.5px solid var(--nav-color);
+    bottom: -5px;
+    width: 600%;
+    left: 0;
+}
+.TopCategory .flex-column a:not(:last-of-type)::after{
+    position: absolute;
+    content: '';
+    border-bottom: 1px dashed var(--nav-color);
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
