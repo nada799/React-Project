@@ -1,7 +1,6 @@
 
 import React, { lazy, Suspense, useEffect, useState } from 'react'
-import {createBrowserRouter , RouterProvider} from 'react-router-dom'
-// import Layout from './components/Layout'
+import {createBrowserRouter , createHashRouter, RouterProvider} from 'react-router-dom'
 import Home from './components/Home/Home'
 import Contact from './components/Contact/Contact'
 import Child1 from './components/Home/Featured/Child1/Child1'
@@ -259,7 +258,7 @@ function deleteProduct(product) {
   
 
 
-  const router = createBrowserRouter([{
+  const router = createHashRouter([{
       path:'' , element:<Suspense fallback={<Loading/>}> <Layout setCart={setCart} wishlist={wishlist} cart={cart} deleteProduct={deleteProduct} /> </Suspense> , children:[
       {path:'' , element: <Home addToWishList={addToWishList} allData={allData} addToCart={addToCart}/> ,children:[
         {path:'' , element : <Child1 handleProductClick={handleProductClick} addToWishList={addToWishList} allData={allData} addToCart={addToCart} />},
