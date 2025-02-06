@@ -17,14 +17,7 @@
 .TopCategory .text-uppercase{
     position: relative;
 }
-/* .TopCategory .text-uppercase::after{
-    position: absolute;
-    content: '';
-    border: 1.5px solid var(--nav-color);
-    bottom: -5px;
-    width: 600%;
-    left: 0;
-} */
+
 .TopCategory .flex-column a:not(:last-of-type)::after{
     position: absolute;
     content: '';
