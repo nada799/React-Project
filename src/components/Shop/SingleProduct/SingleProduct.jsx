@@ -67,7 +67,7 @@ const SingleProduct = ({ allData , addToCart , addToWishList}) => {
             <p className='my-2'>Availability : <span style={{color:'#888'}}>Available</span></p>
           </div>
           <div className='border-bottom'>
-            <p className='desc '>{pro?.discription}</p>
+            <p className='desc '>{pro?.description}</p>
           </div>
           <div className='d-flex flex-column gap-2 mt-2'>
             <button onClick={()=> addToWishList(pro)} className='btn btn-outline-light text-dark w-50 rounded-0'>Add To Wishlist <GoHeartFill/></button>

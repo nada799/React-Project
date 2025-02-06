@@ -25,7 +25,7 @@ function Product({ val , index , onClick , addToCart , addToWishList }) {
           <b onClick={handleClick}>{val?.title}</b>
           <Stars/>
           <div className="details">
-            {val?.description}
+            {val?.description }
           </div>
           <p className='m-0 fw-bold'>${val?.price}</p>
       </div>
