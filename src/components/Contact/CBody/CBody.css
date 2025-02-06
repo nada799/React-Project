@@ -15,7 +15,7 @@
 .CBody .second div p{
     font-size: 14px;
 }
-.CBody .second div p:nth-last-of-type(){
+.CBody .second div p:last-of-type{
     white-space: nowrap;
     display: flex;
 }

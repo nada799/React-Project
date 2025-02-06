@@ -87,11 +87,16 @@ function AllProducts({changeFlexDir , flexDir,allData ,changeSorting , sort ,add
         </div>
       </div>
 
-        <div className="container mt-3">
-          <div className="row box" ref={change}>
-            {showData}
-          </div>
-        </div>
+      <div className="row box" ref={change}>
+  {allData.length > 0 ? (
+    showData
+  ) : searchTerm.trim() !== "" ? (  
+    <p className='text-danger text-center fs-5'>
+      No matching results found
+    </p>
+  ) : null}
+</div>
+
     </div>
   )
 }

@@ -87,7 +87,7 @@ function About({categories , getSpecificCategoryOfProducts ,getSpecificCategoryU
                 <div className="row mt-5" >
                     <div className="col-lg-6">
                       <div>
-                          <b className='fs-5 title'>->> What We Do ?</b>
+                          <b className='fs-5 title'>- What We Do ?</b>
                           <div className='mt-4 '>
                             <div className='textToggle' onClick={() => toggleItem(1)}>1. What is HTML?</div>
                             <div className={` details ${openIndex === 1 ? "open" : ""}`}>HTML is a computer language devised to can then b the Internet. It is relatively easy to learn, with the basics being accessible.</div>
@@ -104,7 +104,7 @@ function About({categories , getSpecificCategoryOfProducts ,getSpecificCategoryU
                     </div>
                     <div className="col-lg-6 ">
                       <div>
-                          <b className='fs-5 title title-2'>->> Skills ..</b>
+                          <b className='fs-5 title title-2'>- Skills ..</b>
                           <div ref={skillsRef} className="skills mt-4">
                               <div className="skill-bar">
                                   <div className="skill-color html" style={{ width: isVisible ? "80%" : "0%" }}>Html → 80%</div>

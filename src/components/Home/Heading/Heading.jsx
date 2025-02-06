@@ -31,7 +31,7 @@ function Heading() {
                     <img src={heading1} alt="" className=''/>
                     <div className='d-flex flex-column justify-content-center'>
                       <b className='text-uppercase' style={{fontSize:'15px'}}>Free Shipping</b>
-                      <p className='text-secondary' style={{fontSize:'15px' , whiteSpace:'nowrap',whiteSpace:'nowrap'}}>Free dedlivery worldwide</p>
+                      <p className='text-secondary' style={{fontSize:'15px',whiteSpace:'nowrap'}}>Free dedlivery worldwide</p>
                     </div>
                   </div>
                 </div>

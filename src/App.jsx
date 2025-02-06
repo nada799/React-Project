@@ -63,10 +63,15 @@ function App() {
     setCategories(data)
   }
 
-  function getSpecificCategoryOfProducts(index){
-    let newArr = spcificCategory[index].products
-    setAllData(newArr)
-  }
+function getSpecificCategoryOfProducts(index) {
+    if (index === null || index === false) {
+      setAllData(allProducts)
+    } else {
+      let newArr = spcificCategory[index].products;
+      setAllData(newArr);
+    }
+}
+
 
   async function getSpecificCategoryURL(url) {
     let {data} = await axios.get(url)
