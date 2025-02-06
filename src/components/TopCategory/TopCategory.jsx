@@ -26,13 +26,13 @@ function TopCategory({ categories , getSpecificCategoryOfProducts ,getSpecificCa
 
   return (
     <div className='TopCategory'>
-      <b className='text-uppercase fs-5 flex justify-content-between' style={{fontWeight:'600' , whiteSpace:'wrap'}}>Top category
+      <b className='text-uppercase fs-5 flex justify-content-between border-bottom' style={{fontWeight:'600' , whiteSpace:'wrap'}}>Top category
       {isMobile && (
          <IoIosArrowUp className={`category-icon ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(!isOpen)}/> 
       )}
          </b>
          {(isOpen || !isMobile) && (
-      <div className='d-flex flex-column mt-3'>
+      <div className='d-flex flex-column'>
         <Link to={'/shop'} style={{fontSize:'18px'}} onClick={() => getSpecificCategoryOfProducts(null)}>All Products</Link>
         {spcificCategory?.map((el , index) => (
           <Link to={'/shop'} key={index} onClick={() => getSpecificCategoryOfProducts(index)}> {el.category} </Link>

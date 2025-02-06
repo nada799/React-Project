@@ -65,7 +65,7 @@ function Cart({categories , getSpecificCategoryOfProducts ,getSpecificCategoryUR
         <div className="col-lg-9 col-sm-12 d-flex flex-column align-items-center">
           {cart.length > 0 ?
           <>
-            <div className='w-100'>
+            <div className='w-100 mt-3'>
               <table>
                 <thead>
                   <th>IMAGE</th>
