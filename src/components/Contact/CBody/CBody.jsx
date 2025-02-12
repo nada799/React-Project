@@ -4,12 +4,12 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import TopCategory from '../../TopCategory/TopCategory';
 
-function CBody({categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
+function CBody({getAllProducts,categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
   return (
     <div className='CBody container'>
       <div className="row">
         <div className="col-lg-3">
-          <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
+          <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
         </div>
         <div className="col-lg-9">
           <div className="row">

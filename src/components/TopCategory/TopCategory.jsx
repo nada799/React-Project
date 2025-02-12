@@ -5,7 +5,7 @@ import { spcificCategory } from '../ProductJson'
 import { Link } from 'react-router-dom'
 import { IoIosArrowUp } from "react-icons/io";
 
-function TopCategory({ categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
+function TopCategory({getAllProducts, categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
   
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992)
@@ -20,6 +20,9 @@ function TopCategory({ categories , getSpecificCategoryOfProducts ,getSpecificCa
       }
     }
 
+
+    
+
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -33,7 +36,7 @@ function TopCategory({ categories , getSpecificCategoryOfProducts ,getSpecificCa
          </b>
          {(isOpen || !isMobile) && (
       <div className='d-flex flex-column'>
-        <Link to={'/shop'} style={{fontSize:'18px'}} onClick={() => getSpecificCategoryOfProducts(null)}>All Products</Link>
+        <Link to={'/shop'} style={{fontSize:'18px'}} onClick={() => getAllProducts(categories) }>All Products</Link>
         {spcificCategory?.map((el , index) => (
           <Link to={'/shop'} key={index} onClick={() => getSpecificCategoryOfProducts(index)}> {el.category} </Link>
         ))}

@@ -21,7 +21,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 
-function About({categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
+function About({getAllProducts,categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
 
 
   const [openIndex, setOpenIndex] = useState(1)
@@ -61,7 +61,7 @@ function About({categories , getSpecificCategoryOfProducts ,getSpecificCategoryU
         <div className="row mt-4">
 
           <div className="col-lg-3">
-            <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}  />
+            <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}  />
             <div className='topBrand mt-4'>
               <b className='text-uppercase topbrands fs-5' style={{fontWeight:'600'}}>top brands</b>
               <div className='d-flex flex-column mt-3'>

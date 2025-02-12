@@ -10,7 +10,7 @@ import Product from '../Home/Product/Product'
 import SecTitle from '../SecTitle/SecTitle'
 import { allProducts } from '../ProductJson'
 
-function Shop({categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL }) {
+function Shop({ getAllProducts , categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL }) {
 
 
   const chunkedProducts = [];
@@ -41,7 +41,7 @@ function Shop({categories , getSpecificCategoryOfProducts ,getSpecificCategoryUR
       <HeadOfPage title1={'Products'} title2={'Products'} />
       <div className="row mt-4">
         <div className="col-lg-3">
-        <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}  />
+        <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}  />
           <div className="mySwiper mt-3">
             <SecTitle titleSec={'Featured Products'}/>
             <Swiper 

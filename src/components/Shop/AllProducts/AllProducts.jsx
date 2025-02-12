@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Product from '../../Home/Product/Product'
 import Loading from '../../Loading'
 
-function AllProducts({changeFlexDir , flexDir,allData ,changeSorting , sort ,addToCart , addToWishList , searchTerm , handleSearch , handleProductClick}) {
+function AllProducts({getAllProducts,changeFlexDir , flexDir,allData ,changeSorting , sort ,addToCart , addToWishList , searchTerm , handleSearch , handleProductClick}) {
 
 
   const row = useRef(null)

@@ -79,7 +79,7 @@
     font-size: 14px;
 }
 .AllProducts select {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     color: white;
     border: 1px solid #ccc;
 }

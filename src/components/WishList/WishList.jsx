@@ -6,12 +6,12 @@ import product1 from '../../assets/images/product/product1.jpg'
 import { IoCloseSharp } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 
-function WishList({ clearWishlist , categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL , wishlist , addToCart , deleteProductInWishlist}) {
+function WishList({getAllProducts, clearWishlist , categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL , wishlist , addToCart , deleteProductInWishlist}) {
   return (
     <div className='WishList container mt-2'>
       <div className="row">
         <div className="col-lg-3">
-          <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
+          <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
         </div>
         
         <div className="col-lg-9 mt-3">

@@ -6,11 +6,11 @@ import CBody from './CBody/CBody'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Header/Navbar/Navbar'
 
-function Contact({ setCart, wishlist, cart,  deleteProduct , categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
+function Contact({getAllProducts, setCart, wishlist, cart,  deleteProduct , categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
   return (
     <div className='Contact'>
       <Header setCart={setCart} wishlist={wishlist} cart={cart} deleteProduct={deleteProduct}/>
-      <CBody categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
+      <CBody getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
       <Footer/>
     </div>
   )

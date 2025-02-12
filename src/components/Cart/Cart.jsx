@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast'
 
 
 
-function Cart({categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL , cart , deleteProduct , setCart}) {
+function Cart({getAllProducts,categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL , cart , deleteProduct , setCart}) {
 
 
   const [quantities, setQuantities] = useState(
@@ -60,7 +60,7 @@ function Cart({categories , getSpecificCategoryOfProducts ,getSpecificCategoryUR
     <div className='Cart container'>
       <div className="row mt-5">
         <div className="col-lg-3">
-          <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
+          <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
         </div>
         <div className="col-lg-9 col-sm-12 d-flex flex-column align-items-center">
           {cart.length > 0 ?

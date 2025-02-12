@@ -17,7 +17,7 @@ import HeadOfPage from '../HeadOfPage/HeadOfPage'
 import { Link, useNavigate } from 'react-router-dom'
 
 
-function Blog({categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
+function Blog({getAllProducts,categories , getSpecificCategoryOfProducts ,getSpecificCategoryURL}) {
 
 
   const navigate = useNavigate()
@@ -49,7 +49,7 @@ function Blog({categories , getSpecificCategoryOfProducts ,getSpecificCategoryUR
             <img src={left} alt="" />
           </div>
           <div className='mt-5'>
-            <TopCategory categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
+            <TopCategory getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>
           </div>
           <div className='mt-4'>
             <b className='topbrands text-uppercase fs-5'>latest post</b>

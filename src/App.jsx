@@ -78,6 +78,17 @@ function getSpecificCategoryOfProducts(index) {
     setAllData(data.products)
   }
 
+
+  async function getAllProducts() {
+    try {
+      let { data } = await axios.get('https://dummyjson.com/products');
+      setAllData([...allProducts, ...data.products]); 
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  }
+  
+
   useEffect(() => {
     getAllProducts()
     getCategories()
@@ -270,21 +281,21 @@ function deleteProduct(product) {
         {path:'best seller' , element:<Child2 handleProductClick={handleProductClick} addToWishList={addToWishList} allData={allData} addToCart={addToCart} />},
         {path:'featured' , element:<Child3 handleProductClick={handleProductClick} addToWishList={addToWishList} allData={allData} addToCart={addToCart} />}
       ]},
-      {path:'shop', element:<Shop flexDir={flexDir} changeFlexDir={changeFlexDir} allData={allData} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL} /> ,children:[
-        {path:'' , element:<AllProducts handleProductClick={handleProductClick} searchTerm={searchTerm} handleSearch={handleSearch} addToWishList={addToWishList} addToCart={addToCart} sort={sort} changeSorting={changeSorting} flexDir={flexDir} changeFlexDir={changeFlexDir} allData={allData}/>},
-        {path:'singleProduct/:index' , element:<SingleProduct addToWishList={addToWishList} addToCart={addToCart} allData={allData}/> , children:[
+      {path:'shop', element:<Shop getAllProducts={getAllProducts} flexDir={flexDir} changeFlexDir={changeFlexDir} allData={allData} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL} /> ,children:[
+        {path:'' , element:<AllProducts getAllProducts={getAllProducts} handleProductClick={handleProductClick} searchTerm={searchTerm} handleSearch={handleSearch} addToWishList={addToWishList} addToCart={addToCart} sort={sort} changeSorting={changeSorting} flexDir={flexDir} changeFlexDir={changeFlexDir} allData={allData}/>},
+        {path:'singleProduct/:index' , element:<SingleProduct getAllProducts={getAllProducts} addToWishList={addToWishList} addToCart={addToCart} allData={allData}/> , children:[
           {path:'' , element:<Nested1/>},
           {path:'nested-2' , element: <Nested2/>},
           {path:'nested-3' , element:<Nested3/>}
         ]}
       ]},
-      {path:'wishlist' , element : <WishList clearWishlist={clearWishlist} deleteProductInWishlist={deleteProductInWishlist} wishlist={wishlist} addToCart={addToCart} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
-      {path:'about us' , element : <About categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
-      {path:'cart' , element: <Cart setCart={setCart} deleteProduct={deleteProduct} cart={cart} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
-      {path:'blog' , element: <Blog categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
-      {path:'blog/singlePost' , element: <SinglePost categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
+      {path:'wishlist' , element : <WishList getAllProducts={getAllProducts} clearWishlist={clearWishlist} deleteProductInWishlist={deleteProductInWishlist} wishlist={wishlist} addToCart={addToCart} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
+      {path:'about us' , element : <About getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
+      {path:'cart' , element: <Cart getAllProducts={getAllProducts} setCart={setCart} deleteProduct={deleteProduct} cart={cart} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
+      {path:'blog' , element: <Blog getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
+      {path:'blog/singlePost' , element: <SinglePost getAllProducts={getAllProducts} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL}/>},
     ]},
-    {path:'contact us',element:<Contact setCart={setCart} wishlist={wishlist} cart={cart} deleteProduct={deleteProduct} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL} />}
+    {path:'contact us',element:<Contact getAllProducts={getAllProducts} setCart={setCart} wishlist={wishlist} cart={cart} deleteProduct={deleteProduct} categories={categories} getSpecificCategoryOfProducts={getSpecificCategoryOfProducts} getSpecificCategoryURL={getSpecificCategoryURL} />}
   ])
 
   return (
